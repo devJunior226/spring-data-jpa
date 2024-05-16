@@ -35,14 +35,6 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
 
     // ## Return the list of products and the opinions
 
-    /**
-     * L'equivalent SQL de:
-     * Select *
-     * FROM product, sentiment
-     * Join product, sentiment
-     * Et ira chercher le produit qui contient le sentiment contenant
-     * le texte passé en param
-     */
     List<Product> findBySentimentsTextContaining(String text);
 }
 
